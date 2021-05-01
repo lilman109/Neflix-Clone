@@ -1,15 +1,15 @@
 import React from 'react';
-import { FaqsContainer } from './containers/faqs';
-import { FooterContainer } from './containers/footer';
-import { JumbotronContainer } from './containers/jumbotron';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/home';
+import * as ROUTES from './constants/route';
 
 const App = () => {
 	return (
-		<>
-			<JumbotronContainer />
-			<FaqsContainer />
-			<FooterContainer />
-		</>
+		<Router>
+			<Switch>
+				<Route exact path={ROUTES.HOME} component={Home} />
+			</Switch>
+		</Router>
 	);
 };
 
