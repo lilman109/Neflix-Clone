@@ -6,10 +6,12 @@ import * as ROUTES from './constants/route';
 const App = () => {
 	return (
 		<Router>
-			<Route exact path={ROUTES.HOME} component={Home} />
-			<Route path={ROUTES.BROWSE} component={Browse} />
-			<Route exact path={ROUTES.SIGN_IN} component={SignIn} />
-			<Route exact path={ROUTES.SIGN_UP} component={SignUp} />
+			<Switch>
+				<Route exact path={ROUTES.HOME} component={Home} />
+				<Route path={ROUTES.BROWSE} component={Browse} />
+				<Route exact path={ROUTES.SIGN_IN} component={SignIn} />
+				<Route exact path={ROUTES.SIGN_UP} component={SignUp} />
+			</Switch>
 		</Router>
 	);
 };
