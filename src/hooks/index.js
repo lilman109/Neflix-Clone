@@ -1,1 +1,1 @@
-export { UseAuthListener } from './use-auth-listener';
+export { useAuthListener } from './use-auth-listener';
