@@ -9,8 +9,8 @@ const App = () => {
 			<Switch>
 				<Route exact path={ROUTES.HOME} component={Home} />
 				<Route path={ROUTES.BROWSE} component={Browse} />
-				<Route exact path={ROUTES.SIGN_IN} component={SignIn} />
-				<Route exact path={ROUTES.SIGN_UP} component={SignUp} />
+				<Route path={ROUTES.SIGN_IN} component={SignIn} />
+				<Route path={ROUTES.SIGN_UP} component={SignUp} />
 			</Switch>
 		</Router>
 	);
