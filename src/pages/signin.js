@@ -20,7 +20,7 @@ export const SignIn = () => {
 			.auth()
 			.signInWithEmailAndPassword(email, password)
 			.then(() => {
-				history.push(ROUTES.HOME);
+				history.push(ROUTES.BROWSE);
 			})
 			.catch((error) => {
 				setEmail('');
@@ -46,13 +46,11 @@ export const SignIn = () => {
 					<Form.Base onSubmit={handleSignIn}>
 						<Form.Input
 							onChange={handleEmailChange}
-							name='email'
 							value={email}
 							placeholder='Email Address'
 						></Form.Input>
 						<Form.Input
 							onChange={handlePasswordChange}
-							name='password'
 							value={password}
 							placeholder='Password'
 							type='password'
@@ -64,7 +62,7 @@ export const SignIn = () => {
 					</Form.Base>
 					<Form.Text>
 						New to Netflix?&nbsp;
-						<Form.Link>Sign Up Now</Form.Link>
+						<Form.Link to={ROUTES.SIGN_UP}>Sign Up Now</Form.Link>
 					</Form.Text>
 					<Form.TextSmall>
 						This page is proctected by Google reCAPTCHA to ensure you're now a
