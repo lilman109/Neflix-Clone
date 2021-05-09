@@ -5,7 +5,7 @@ export const Loading = ({ src, ...restProps }) => {
 	return (
 		<Spinner>
 			<LockBody />
-			<Photo src={`/images/users${src}.png`} />
+			<Photo src={`/images/users/${src}.png`} />
 		</Spinner>
 	);
 };
