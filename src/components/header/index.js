@@ -7,6 +7,8 @@ import {
 	ButtonLink,
 	Feature,
 	Text,
+	Link,
+	Group,
 	FeatureCallOut,
 } from './styles/header';
 
@@ -29,8 +31,16 @@ Header.Text = function HeaderText({ children, ...restProps }) {
 	return <Text {...restProps}>{children}</Text>;
 };
 
+Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
+	return <Link {...restProps}>{children}</Link>;
+};
+
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
 	return <Container {...restProps}>{children}</Container>;
+};
+
+Header.Group = function HeaderGroup({ children, ...restProps }) {
+	return <Group {...restProps}>{children}</Group>;
 };
 
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
