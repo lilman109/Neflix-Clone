@@ -10,6 +10,9 @@ import {
 	Link,
 	Group,
 	FeatureCallOut,
+	Photo,
+	Profile,
+	Dropdown,
 } from './styles/header';
 
 export const Header = ({ bg = true, children, ...restProps }) => {
@@ -57,4 +60,16 @@ Header.ButtonLink = function HeaderButtonLink({ to, children, ...restProps }) {
 			{children}
 		</ButtonLink>
 	);
+};
+
+Header.Photo = function HeaderPhoto({ src, ...restProps }) {
+	return <Photo {...restProps} src={`/images/users/${src}.png`} />;
+};
+
+Header.Profile = function HeaderProfile({ children, ...restProps }) {
+	return <Profile {...restProps}>{children}</Profile>;
+};
+
+Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
+	return <Dropdown {...restProps}>{children}</Dropdown>;
 };

@@ -103,3 +103,64 @@ export const FeatureCallOut = styled.h2`
 	margin: 0;
 	margin-bottom: 20px;
 `;
+
+export const Photo = styled.button`
+	background: url(${({ src }) => src});
+	background-size: contain;
+	border: 0;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+`;
+
+export const Dropdown = styled.div`
+	display: none;
+	background-color: black;
+	position: absolute;
+	padding: 10px;
+	width: 100px;
+	top: 32px;
+	right: 10px;
+
+	${Group}:last-of-type ${Link} {
+		cursor: pointer;
+	}
+
+	${Group} {
+		margin-bottom: 10px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		${Link}, ${Photo} {
+			cursor: default;
+		}
+	}
+
+	button {
+		margin-right: 10px;
+	}
+
+	p {
+		font-size: 12px;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+`;
+
+export const Profile = styled.div`
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+	position: relative;
+
+	button {
+		cursor: pointer;
+	}
+
+	&:hover > ${Dropdown} {
+		display: flex;
+		flex-direction: column;
+	}
+`;
