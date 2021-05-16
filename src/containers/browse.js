@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { SelectProfileContainer } from '../containers/profiles';
 import { FooterContainer } from '../containers/footer';
 import { FirebaseContext } from '../context/firebase';
-import { Loading, Header, Card } from '../components';
+import { Loading, Header, Card, Player } from '../components';
 import * as ROUTES from '../constants/route';
 import logo from '../logo.svg';
 
@@ -82,7 +82,6 @@ export const BrowseContainer = ({ slides }) => {
 
 			<Card.Group>
 				{slideRows.map((slideItem) => {
-					console.log('akira', slideItem);
 					return (
 						<Card key={`${category}-${slideItem.title.toLowerCase()}`}>
 							<Card.Title>{slideItem.title}</Card.Title>
@@ -102,7 +101,10 @@ export const BrowseContainer = ({ slides }) => {
 								})}
 							</Card.Entities>
 							<Card.Feature category={category}>
-								<p>Helllooooooooo</p>
+								<Player>
+									<Player.Button />
+									<Player.Video src='/videos/bunny.mp4' />
+								</Player>
 							</Card.Feature>
 						</Card>
 					);
