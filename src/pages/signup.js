@@ -84,7 +84,7 @@ export const SignUp = () => {
 					</Form.Base>
 					<Form.Text>
 						New to Netflix?&nbsp;
-						<Form.Link>Sign Up Now</Form.Link>
+						<Form.Link to={ROUTES.SIGN_UP}>Sign Up Now</Form.Link>
 					</Form.Text>
 					<Form.TextSmall>
 						This page is proctected by Google reCAPTCHA to ensure you're now a
