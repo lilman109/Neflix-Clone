@@ -38,11 +38,11 @@ export const selectionFilter = ({ series }, { films }) => {
 			},
 			{
 				title: 'Suspense',
-				data: series.filter((item) => item.genre === 'suspense'),
+				data: films.filter((item) => item.genre === 'suspense'),
 			},
 			{
 				title: 'Romance',
-				data: series.filter((item) => item.genre === 'romance'),
+				data: films.filter((item) => item.genre === 'romance'),
 			},
 		],
 	};

@@ -100,13 +100,9 @@ export const BrowseContainer = ({ slides }) => {
 									);
 								})}
 							</Card.Entities>
-							{/* <Card.Feature cateogry={category}>
-								<Player>
-									<Player.Button>
-										<Player.Video src='/video/bunny/mp4: ' />
-									</Player.Button>
-								</Player>
-							</Card.Feature> */}
+							<Card.Feature category={category}>
+								<p>Helllooooooooo</p>
+							</Card.Feature>
 						</Card>
 					);
 				})}
