@@ -81,8 +81,8 @@ Card.Feature = function CardFeature({ category, children, ...restProps }) {
 							itemFeature.genre.slice(1)}
 					</FeatureText>
 				</Group>
+				{children}
 			</Content>
-			{children}
 		</Feature>
 	) : null;
 };

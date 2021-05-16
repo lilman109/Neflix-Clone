@@ -70,7 +70,7 @@ export const FeatureText = styled.p`
 
 export const Feature = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	background: url(${({ src }) => src});
 	background-size: contain;
 	position: relative;
